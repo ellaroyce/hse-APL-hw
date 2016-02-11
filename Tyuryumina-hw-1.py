@@ -52,9 +52,12 @@ for row in myDataTable:
       for cellInRow in row:
             if cellInRow[0] == "=":
                   try:
-                        dataRows[i][j] = eval(cellInRow[1:], ns, myDictionary)
+                        dataRows[i][j] = eval(cellInRow[1:],ns,myDictionary)
                   except NameError:
-                        dataRows[i][j] = eval(cellInRow[1:], globals(), myDictionary)
+                        try:
+                              dataRows[i][j] = eval(cellInRow[1:],globals(),myDictionary)
+                        except NameError:
+                              dataRows[i][j] = "[X]ERROR"
                   j+=1
             else:
                   j+=1           
