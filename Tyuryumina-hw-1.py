@@ -1,6 +1,9 @@
-import csv, math, os
+import csv, math, os, sys, argparse
 
-readedInputFile = csv.reader(open("0.7-CustomScript-input.csv","rb"))
+inputFileName = sys.argv[1]
+outputFileName = sys.argv[2]
+
+readedInputFile = csv.reader(open(inputFileName,"rb"))
 
 myDataTable = []
 
@@ -8,9 +11,9 @@ for row in readedInputFile:
       myDataTable.append(row)
 
 def touch(path):
-    with open(path, 'output.csv'):
+    with open(path, outputFileName):
         os.utime(path, None)
-wroteOutputFile = csv.writer(open("output.csv", "wb"))
+wroteOutputFile = csv.writer(open(outputFileName, "wb"))
 
 ns = vars(math).copy()
 ns['__builtins__'] = None
