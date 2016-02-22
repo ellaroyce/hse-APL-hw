@@ -15,9 +15,11 @@ if len(sys.argv) > 3:
     if myFunction[-3:] == '.py':
         myFunction = myFunction[:-3]
 # begin of copyright
-# from http://stackoverflow.com/questions/19009932/import-abitrary-python-source-file-python-3-3
+# from
+# http://stackoverflow.com/questions/19009932/import-abitrary-python-source-file-python-3-3
         openfile, pathname, description = imp.find_module(myFunction)
-        myFunction = imp.load_module(myFunction, openfile, pathname, description)
+        myFunction = imp.load_module(
+            myFunction, openfile, pathname, description)
         myDictionary.update(myFunction.__dict__)
 # end of copyrigth
 
