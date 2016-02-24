@@ -4,6 +4,8 @@ import imp
 import math
 import os
 import sys
+import string
+import stdin
 
 inputFileName = sys.argv[1]
 outputFileName = sys.argv[2]
