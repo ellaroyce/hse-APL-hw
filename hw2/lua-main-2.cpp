@@ -8,9 +8,9 @@ extern "C" {
 #include <string.h>
 }
 
-import inspect
+// import inspect
 
-py_eval = eval
+// py_eval = eval
 
 static PyObject * lua_eval(PyObject* module, PyObject* args)
 {
