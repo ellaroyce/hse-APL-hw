@@ -8,10 +8,6 @@ extern "C" {
 #include <string.h>
 }
 
-import inspect
-
-py_eval = eval
-
 static PyObject * lua_eval(PyObject* module, PyObject* args)
 {
     PyObject* a = PyTuple_GetItem(args, 0);
