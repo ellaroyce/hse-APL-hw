@@ -1,0 +1,6 @@
+1. cd hw4/
+2. mkdir bin
+3. erlc -o bin ./src/*.erl
+4. cd bin/
+5. erl
+6. main:s(8888).
